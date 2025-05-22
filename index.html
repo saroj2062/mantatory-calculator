@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+<link rel="stylesheet" href="check-box.css">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+</head>
+<body>
+
+  <main>
+
+  <section class="main-container">
+ 
+    <div class="form-container">
+      <div class="header">
+        <h4>Mortgage Calculator</h4>
+        <button id="btm-clear">Clear All</button>
+      </div>
+
+      <form id="myForm">
+        <p>Mortage Calculator</p>
+        <div class="input-container">
+         <span class="tag">&pound;</span>
+        <input type="text" id="amount" name="amount" required>
+         
+        </div>
+        <span class="error"></span>
+       
+        <div class="detail-data-container">
+            
+          <div>
+            <p>Mortage Term</p>
+          <div class="input-data-container">
+             <input type="text" id="term"  name="term" required>
+           <span class="tag">years</span>
+        
+           </div>
+              <span class="error"></span>
+          </div>
+        <div>
+           <p>Mortage Rate</p>
+          <div class="input-data-container">  
+            <input type="text" id="rate" name="rate" required maxlength="3" >
+           <span class="tag">%</span>
+         
+        </div>
+          <span class="error"></span>
+        </div>
+          
+       
+
+        </div>
+
+      <p> Mortage Type</p>
+       <div class="type">
+       <label  class="type-checkbox"> 
+        <input type="checkbox" id="type" value="rep" name="payment"  > 
+        <span></span> 
+        Repayment 
+      </label>
+       
+        
+         
+       </div>
+         <div class="type" >
+          <label  class="type-checkbox">
+            <input type="checkbox" value="int" id="type"  name="payment">
+              <span></span>
+            Interest Only </label>
+       </div>
+      
+    <button id="calculation" ><img src="assets/images/icon-calculator.svg" alt="">Calculate Repayments</button>
+    
+    </form>
+
+    </div>
+
+
+  
+
+  <div class="result-container">
+    <div class="empty-design" id="empty">
+      <figure class="img-container">
+      <img src="assets/images/illustration-empty.svg" alt="illustration-empty">
+
+    </figure>
+    <div class="detail-container">
+       <h4>Results shown here</h4>
+    <p class="detail">Complete the form and “calculate repayments” to see what 
+        your monthly repayments would be.</p>
+    </div>
+   
+    </div>
+
+     <div class="result-design">
+      <div class="result-design-header">
+         <h4>Your results</h4>
+
+      <p class="detail">
+        
+      Your results are shown below based on the information you provided. 
+       To adjust the results, edit the form and click “calculate repayments” again.
+      </p>
+      </div>
+       
+      
+      
+
+      <div class="result-data-container">
+        <div class="repayment-container" id="result">
+           <p class="detail">Your monthly repayments</p>
+        <span id="repayments-value">&pound;</span>
+        </div>
+       
+        
+        <p class="detail">  Total you'll repay over the term
+</p>
+    <span id="total-value">&pound;</span>
+      </div>
+
+
+  </div>
+    
+
+</section>
+  </main>
+
+
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

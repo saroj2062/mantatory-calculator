@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Poppins;
+  
+}
+
+body{
+    --bg-color: hsl(202, 86%, 94%);
+    --bg-form-color:hsl(0, 0%, 100%);
+    --bg-color-result: hsl(202, 55%, 16%);
+    --hover-sate-color:hsl(61, 70%, 52%);
+    --font-color:hsl(200, 26%, 54%);
+    --error-font-color:hsl(200, 26%, 54%);
+    --error-border-color:black;
+
+}
+body.error{
+ --font-color:hsl(4, 69%, 50%);
+    --error-border-color:black; 
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100%; 
+    background-color: var(--bg-color);
+}
+.main-container{
+    background-color: var(--bg-form-color);
+    display: flex;
+    max-width: 1000px;
+    gap: 0px 20px;
+     border-radius: 20px;
+    
+}
+.form-container{
+    min-width:450px;
+    padding: 20px;
+}
+.header{
+  max-width : 100%;
+    display: flex;
+    justify-content: space-between;
+    padding:20px 0px 30px 0px;
+}
+#btm-clear{
+    padding: -15px 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: hsl(200, 26%, 54%);
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid hsl(200, 26%, 54%);
+}
+#btm-clear:hover{
+ color: var(--hover-sate-color);
+ border: none;
+}
+h4{
+    font-weight: 500;
+}
+form p {
+    font-size: 0.7rem;
+    color: var(--font-color);
+    padding: 9px 0px;
+
+}
+form input[type ="text"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+    border-radius: 10px;
+    height: 100%;
+    font-weight: 500;
+    font-size: 1.1rem;
+
+}
+
+.input-container,.input-data-container{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    border: 2px solid var(--font-color);
+    border-radius: 5px;
+    height: 50px;
+}
+/* focus  state and focus-within  state */
+.input-container:hover,.input-data-container:hover,
+.input-container:focus-within,.input-data-container:focus-within{
+    border-color: var(--hover-sate-color);
+}
+/* hover state for a input field  */
+.input-container:hover span,.input-data-container:hover span,
+.input-container:focus-within span,.input-data-container:focus-within span{
+    border-color: var(--hover-sate-color);
+     background-color: var(--hover-sate-color); 
+    color: black;
+}
+.input-container .tag ,.input-data-container .tag{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    padding: 0px 15px;
+    border-radius: 4px 0px 0px 4px;
+    height: 100%;
+    align-content: center;    
+    font-weight: 300;
+    font-size: 0.9  rem;   
+}
+.error{
+    color: red;
+    font-size: 0.8rem;
+    padding-left: 5px;
+
+}
+.input-data-container .tag{
+    border-radius: 0px 4px 4px 0px;
+  }
+.detail-data-container{
+    display: flex;
+    gap: 20px;
+    padding: 20px 0px;
+}
+
+
+#calculation{
+    margin: 20px 0px;
+    padding: 5px 15px;
+    justify-items: center;
+    border-radius: 50px;
+    display: flex;
+    border: 2px solid var(--hover-sate-color);
+    background-color: var(--hover-sate-color);
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    
+}
+#calculation:hover{
+ background-color: transparent;
+}
+.empty-design{
+    display: block;
+}
+figure{
+    text-align: center;
+}
+.result-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 15px 15px 70px;
+    background-color:var(--bg-color-result) ;
+    min-height:300px ;
+   min-width: 500px;
+   color:var(--font-color) ;
+  
+}
+.detail-container h4{
+    color: white;
+    padding: 10px;
+}
+.detail-container{
+    text-align: center;
+}
+.detail{
+    font-size: 0.7rem;
+    max-width: 400px;
+}
+/* result desgin code is here  */
+
+.result-design{
+    display: none;
+    gap: 20px;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   
+}
+.result-design h4{
+    margin-bottom: 60px;
+    color: white;
+    padding: 10px;
+}
+.result-data-container{
+    border-top: 5px solid var(--hover-sate-color);
+    border-radius: 10px;
+   width: 100%;
+   padding: 30px 30px;
+   background-color:hsla(200, 13%, 9%, 0.481) ;
+    
+}
+.repayment-container{
+    border-bottom: 2px solid var(--bg-form-color);
+    margin-bottom: 20px;
+    padding-bottom:20px ;
+
+}
+/* result container box  */
+#repayments-value{
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--hover-sate-color);
+}
+#total-value{
+    font-weight: 400;
+    font-size:1rem;
+    color: white;
+    padding: 15px 0px;
+}
+/* Responsible desgin */
+@media (max-width:600px){
+.main-container{
+    flex-direction: column; 
+
+}
+.form-container{
+    min-width:450px;
+    padding: 10px 50px;
+}
+.header{
+    flex-direction: column;
+    gap: 10px;
+    
+    
+}
+#btm-clear{
+    width: 90px;
+    padding: 0px;
+}
+.detail-data-container{
+display: block;  
+}
+#calculation{
+    width: 100%;
+    padding: 15px;
+justify-content: center;
+}
+
+.result-container
+{
+    border-radius: 0px;
+    padding: 15px 0px;
+    min-width: 100%;
+}
+}
